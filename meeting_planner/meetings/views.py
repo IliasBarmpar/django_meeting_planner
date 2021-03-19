@@ -4,7 +4,6 @@ from django.forms import modelform_factory
 from .models import Meeting, Room
 from .forms import MeetingForm
 
-#blablabla x2
 def detail(request, id):
     #meeting = Meeting.objects.get(pk=id)
     meeting = get_object_or_404(Meeting, pk=id)
