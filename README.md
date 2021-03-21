@@ -8,7 +8,7 @@ A Meetings Planner using Django!
 ## Installation
 ```
 $ git clone https://github.com/IliasBarmpar/django_meeting_planner.git
-$ cd django_meeting_planner/
+$ cd django_meeting_planner
 $ pip install -r requirements.txt
 $ cd meeting_planner
 ```
