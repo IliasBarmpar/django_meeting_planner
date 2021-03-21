@@ -4,8 +4,9 @@ from django.forms import modelform_factory
 from .models import Meeting, Room
 from .forms import MeetingForm
 
+
 def detail(request, id):
-    #meeting = Meeting.objects.get(pk=id)
+    # meeting = Meeting.objects.get(pk=id)
     meeting = get_object_or_404(Meeting, pk=id)
     return render(request, "meetings/detail.html", {"meeting": meeting})
 
@@ -14,7 +15,7 @@ def room_list(request):
     return render(request, "meetings/room_list.html", {"room_list": Room.objects.all()})
 
 
-#MeetingForm = modelform_factory(Meeting, exclude=[])
+# MeetingForm = modelform_factory(Meeting, exclude=[])
 
 
 def new(request):
