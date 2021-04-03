@@ -18,6 +18,7 @@ from django.urls import path, include
 
 from website.views import welcome, date, about
 
+# TODO: '', 'date', 'about' -> include('website.urls')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome, name="welcome"),

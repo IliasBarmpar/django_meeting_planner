@@ -15,7 +15,7 @@ def room_list(request):
     return render(request, "meetings/room_list.html", {"room_list": Room.objects.all()})
 
 
-# MeetingForm = modelform_factory(Meeting, exclude=[])
+MeetingForm2 = modelform_factory(Meeting, exclude=[])
 
 
 def new(request):
@@ -26,4 +26,5 @@ def new(request):
             return redirect("welcome")
     else:
         form = MeetingForm()
-    return render(request, "meetings/new.html", {"form": form})
+        form2 = MeetingForm2()
+    return render(request, "meetings/new.html", {"form": form, "form2": form2})
